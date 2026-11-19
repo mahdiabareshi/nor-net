@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// کاربران سایت (تفاوت با ادمین پنل پاسارگارد)
+model SiteUser {
+  id            String        @id @default(cuid())
+  username      String        @unique
+  passwordHash  String
+  role          String        @default("user") // user | admin
+  walletBalance Int           @default(0) // تومان
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  receipts      Receipt[]
+  transactions  Transaction[]
+  orders        Order[]
+}
+
+// رسیدهای کارت‌به‌کارت
+model Receipt {
+  id        String    @id @default(cuid())
+  userId    String
+  user      SiteUser  @relation(fields: [userId], references: [id])
+  amount    Int // تومان
+  imagePath String
+  status    String    @default("pending") // pending | approved | rejected
+  adminNote String?
+  createdAt DateTime  @default(now())
+  decidedAt DateTime?
+}
+
+// گردش کیف پول
+model Transaction {
+  id        String   @id @default(cuid())
+  userId    String
+  user      SiteUser @relation(fields: [userId], references: [id])
+  type      String // charge | purchase | refund
+  amount    Int // مثبت = شارژ / منفی = برداشت
+  note      String?
+  createdAt DateTime @default(now())
+}
+
+// سفارش کانفیگ (ساخت خودکار در پنل پاسارگارد)
+model Order {
+  id              String    @id @default(cuid())
+  userId          String
+  user            SiteUser  @relation(fields: [userId], references: [id])
+  kind            String // volume | unlimited
+  gb              Int?
+  months          Int
+  devices         Int
+  price           Int
+  panelUsername   String?
+  subscriptionUrl String?
+  status          String    @default("creating") // creating | done | failed
+  note            String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+// تنظیمات سایت (شماره کارت، نام صاحب کارت، قیمت‌گذاری و ...)
+model Setting {
+  key   String @id
+  value String
+}

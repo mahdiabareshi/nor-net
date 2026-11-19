@@ -1,0 +1,218 @@
+/* ===== نورنت: تم مشکی-بنفش ===== */
+/* ===== نورنت: تم مشکی-بنفش (اختصاصی اپ حساب کاربری) ===== */
+.nrt-theme body,
+body.nrt-theme {
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(139, 92, 246, .16), transparent 60%),
+    radial-gradient(900px 500px at 10% 110%, rgba(139, 92, 246, .1), transparent 60%),
+    #06030f !important;
+  color: #ece9f6 !important;
+  font-family: 'Vazirmatn', Tahoma, 'Segoe UI', sans-serif !important;
+  min-height: 100vh;
+}
+.nrt-theme * { box-sizing: border-box; }
+.nrt-theme .wrap {
+  min-height: 100vh; display: grid; place-items: center; padding: 20px;
+}
+.nrt-theme .loader {
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 3px solid rgba(139, 92, 246, .25); border-top-color: #8b5cf6;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg) } }
+.nrt-theme .auth-card {
+  width: min(420px, 100%);
+  background: rgba(139, 92, 246, .06);
+  border: 1px solid rgba(168, 85, 247, .25);
+  border-radius: 20px; padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .5), 0 0 40px rgba(139, 92, 246, .08);
+}
+.nrt-theme .brand {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 1.25rem; font-weight: 800; margin-bottom: 18px;
+}
+.nrt-theme .brand small { color: #9d94c0; font-weight: 500; font-size: .8rem }
+.nrt-theme .logo {
+  width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7); color: #fff; font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, .45);
+}
+.nrt-theme .seg {
+  display: flex; gap: 6px; background: rgba(139, 92, 246, .08);
+  border: 1px solid rgba(168, 85, 247, .16); border-radius: 13px; padding: 5px; margin-bottom: 16px;
+}
+.nrt-theme .seg button {
+  flex: 1; padding: 10px; border-radius: 10px; border: 0; cursor: pointer;
+  background: transparent; color: #b6aed4; font-family: inherit; font-weight: 700; transition: .2s;
+}
+.nrt-theme .seg button.on { background: linear-gradient(135deg, #8b5cf6, #a855f7); color: #fff; box-shadow: 0 4px 14px rgba(139, 92, 246, .4) }
+.nrt-theme label { display: block; font-size: .85rem; color: #b6aed4; margin: 12px 0 6px; font-weight: 700 }
+.nrt-theme input {
+  width: 100%; padding: 12px 14px; border-radius: 12px; font-family: inherit; font-size: .95rem;
+  background: rgba(6, 3, 15, .6); border: 1px solid rgba(168, 85, 247, .22); color: #ece9f6; outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.nrt-theme input:focus { border-color: rgba(168, 85, 247, .6); box-shadow: 0 0 0 3px rgba(139, 92, 246, .15) }
+.nrt-theme input[type="file"] { padding: 9px; color: #b6aed4 }
+.nrt-theme .ferr { color: #fca5a5; font-size: .85rem; margin-top: 10px }
+.nrt-theme .hint { color: #7e75a3; font-size: .78rem; margin-top: 16px; text-align: center }
+.nrt-theme .btn-main {
+  width: 100%; margin-top: 16px; padding: 13px; border: 0; border-radius: 14px; cursor: pointer;
+  font-family: inherit; font-weight: 800; font-size: .98rem; color: #fff;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, .35); transition: .25s;
+}
+.nrt-theme .btn-main:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(139, 92, 246, .45) }
+.nrt-theme .btn-main:disabled { opacity: .6; cursor: wait }
+
+/* شِل اپ */
+.nrt-theme .shell { max-width: 1060px; margin: 0 auto; padding: 18px 16px 40px; min-height: 100vh; display: flex; flex-direction: column }
+.nrt-theme .topbar {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap;
+  background: rgba(139, 92, 246, .07); border: 1px solid rgba(168, 85, 247, .2);
+  border-radius: 16px; padding: 14px 18px; backdrop-filter: blur(10px);
+}
+.nrt-theme .topbar .brand { margin: 0; font-size: 1.1rem }
+.nrt-theme .top-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap }
+.nrt-theme .balance-chip, .nrt-theme .user-chip {
+  background: rgba(139, 92, 246, .1); border: 1px solid rgba(168, 85, 247, .22);
+  padding: 7px 13px; border-radius: 11px; font-size: .85rem;
+}
+.nrt-theme .balance-chip b { color: #c4b5fd }
+.nrt-theme .mini-btn {
+  background: rgba(139, 92, 246, .12); border: 1px solid rgba(168, 85, 247, .3);
+  color: #d8ccfa; padding: 6px 12px; border-radius: 10px; cursor: pointer; font-family: inherit;
+  font-size: .8rem; font-weight: 700; transition: .2s;
+}
+.nrt-theme .mini-btn:hover { background: rgba(139, 92, 246, .22) }
+.nrt-theme .tabs { display: flex; gap: 7px; margin: 16px 0; flex-wrap: wrap }
+.nrt-theme .tabs button {
+  padding: 10px 17px; border-radius: 12px; cursor: pointer; font-family: inherit;
+  background: rgba(139, 92, 246, .07); border: 1px solid rgba(168, 85, 247, .16); color: #b6aed4;
+  font-weight: 700; font-size: .9rem; transition: .2s;
+}
+.nrt-theme .tabs button.on { background: linear-gradient(135deg, #8b5cf6, #a855f7); color: #fff; box-shadow: 0 4px 14px rgba(139, 92, 246, .35) }
+.nrt-theme .content { flex: 1 }
+.nrt-theme .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start }
+.nrt-theme .card {
+  background: rgba(139, 92, 246, .055); border: 1px solid rgba(168, 85, 247, .2);
+  border-radius: 18px; padding: 22px; backdrop-filter: blur(8px);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, .35);
+}
+.nrt-theme .card.wide { grid-column: 1 / -1 }
+.nrt-theme h2 { margin: 0 0 6px; font-size: 1.15rem; color: #f3f0fc }
+.nrt-theme h3 { margin: 16px 0 8px; font-size: .95rem; color: #d8ccfa }
+.nrt-theme .sub { color: #9d94c0; font-size: .83rem; line-height: 1.9; margin: 4px 0 12px }
+.nrt-theme .cardinfo { background: rgba(6, 3, 15, .5); border: 1px dashed rgba(168, 85, 247, .35); border-radius: 14px; padding: 14px; margin-bottom: 14px }
+.nrt-theme .ci-row { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: .9rem; flex-wrap: wrap }
+.nrt-theme .ci-row.col { flex-direction: column; align-items: flex-start }
+.nrt-theme .ci-row span { color: #9d94c0; min-width: 88px; font-size: .82rem }
+.nrt-theme .ci-row b { color: #ece9f6; word-break: break-all }
+.nrt-theme .chips { display: flex; gap: 7px; flex-wrap: wrap; margin: 8px 0 }
+.nrt-theme .chip {
+  padding: 8px 14px; border-radius: 10px; cursor: pointer; font-family: inherit; font-weight: 700;
+  background: rgba(139, 92, 246, .08); border: 1px solid rgba(168, 85, 247, .2); color: #b6aed4; transition: .2s; font-size: .85rem;
+}
+.nrt-theme .chip.on { background: rgba(139, 92, 246, .28); border-color: rgba(168, 85, 247, .6); color: #fff; box-shadow: 0 0 14px rgba(139, 92, 246, .25) }
+.nrt-theme .stepper { display: inline-flex; align-items: center; gap: 14px; background: rgba(6, 3, 15, .55); border: 1px solid rgba(168, 85, 247, .22); border-radius: 12px; padding: 6px 10px; margin: 6px 0 }
+.nrt-theme .step-btn {
+  width: 34px; height: 34px; border-radius: 9px; border: 1px solid rgba(168, 85, 247, .3);
+  background: rgba(139, 92, 246, .14); color: #fff; font-size: 1.15rem; cursor: pointer; transition: .2s;
+}
+.nrt-theme .step-btn:hover { background: rgba(139, 92, 246, .3) }
+.nrt-theme .step-val { min-width: 34px; text-align: center; font-weight: 800; font-size: 1.05rem }
+.nrt-theme .pricebox {
+  background: rgba(139, 92, 246, .1); border: 1px solid rgba(168, 85, 247, .3); border-radius: 13px;
+  padding: 13px 16px; margin: 14px 0; font-size: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.nrt-theme .pricebox b { font-size: 1.3rem; color: #c4b5fd }
+.nrt-theme .preview { width: 100%; max-height: 200px; object-fit: contain; border-radius: 12px; margin-top: 10px; border: 1px solid rgba(168, 85, 247, .25) }
+.nrt-theme .rows { display: flex; flex-direction: column; gap: 8px }
+.nrt-theme .row {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  background: rgba(6, 3, 15, .45); border: 1px solid rgba(168, 85, 247, .14);
+  border-radius: 12px; padding: 11px 14px; font-size: .88rem;
+}
+.nrt-theme .row b.pos { color: #86efac }
+.nrt-theme .row b.neg { color: #fca5a5 }
+.nrt-theme .row small { color: #9d94c0 }
+.nrt-theme .note-err { color: #fca5a5 !important; width: 100% }
+.nrt-theme .badge { padding: 4px 11px; border-radius: 20px; font-size: .74rem; font-weight: 800 }
+.nrt-theme .b-ok { background: rgba(74, 222, 128, .12); color: #86efac; border: 1px solid rgba(74, 222, 128, .35) }
+.nrt-theme .b-wait { background: rgba(250, 204, 21, .1); color: #fde047; border: 1px solid rgba(250, 204, 21, .3) }
+.nrt-theme .b-err { background: rgba(248, 113, 113, .1); color: #fca5a5; border: 1px solid rgba(248, 113, 113, .3) }
+.nrt-theme .resultbox { background: rgba(74, 222, 128, .04); border: 1px solid rgba(74, 222, 128, .25); border-radius: 14px; padding: 14px }
+.nrt-theme .sublink {
+  font-size: .78rem; background: rgba(6, 3, 15, .6); border: 1px solid rgba(168, 85, 247, .2);
+  border-radius: 10px; padding: 9px 11px; color: #c4b5fd; word-break: break-all; max-width: 100%;
+}
+.nrt-theme .sublink.short { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.nrt-theme .order-row { grid-column: 1 / -1 }
+.nrt-theme .rcpt-meta { display: flex; flex-direction: column; gap: 5px; min-width: 130px }
+.nrt-theme .rcpt-img { max-width: 170px; max-height: 170px; border-radius: 12px; border: 1px solid rgba(168, 85, 247, .25); object-fit: cover; cursor: pointer }
+.nrt-theme .rcpt-actions { display: flex; flex-direction: column; gap: 8px; min-width: 190px }
+.nrt-theme .btn-ok {
+  background: linear-gradient(135deg, #16a34a, #22c55e); color: #fff; border: 0; border-radius: 11px;
+  padding: 10px 14px; cursor: pointer; font-family: inherit; font-weight: 800; font-size: .85rem; transition: .2s;
+}
+.nrt-theme .btn-err {
+  background: rgba(248, 113, 113, .12); color: #fca5a5; border: 1px solid rgba(248, 113, 113, .4);
+  border-radius: 11px; padding: 10px 14px; cursor: pointer; font-family: inherit; font-weight: 800; font-size: .85rem; transition: .2s;
+}
+.nrt-theme .btn-err:hover { background: rgba(248, 113, 113, .25) }
+.nrt-theme .reject-box { display: flex; gap: 8px }
+.nrt-theme .reject-box input { flex: 1 }
+.nrt-theme .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px }
+.nrt-theme .stat { background: rgba(139, 92, 246, .08); border: 1px solid rgba(168, 85, 247, .2); border-radius: 13px; padding: 14px; text-align: center }
+.nrt-theme .stat b { display: block; font-size: 1.4rem; color: #c4b5fd }
+.nrt-theme .stat span { font-size: .78rem; color: #9d94c0 }
+.nrt-theme .toastbar {
+  position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 100;
+  padding: 12px 22px; border-radius: 13px; font-weight: 700; font-size: .88rem; max-width: min(92vw, 520px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .5); animation: drop .3s ease;
+}
+.nrt-theme .t-ok { background: #172415; color: #86efac; border: 1px solid rgba(74, 222, 128, .4) }
+.nrt-theme .t-err { background: #2b1414; color: #fca5a5; border: 1px solid rgba(248, 113, 113, .4) }
+@keyframes drop { from { opacity: 0; transform: translate(-50%, -12px) } to { opacity: 1; transform: translate(-50%, 0) } }
+.nrt-theme .foot { text-align: center; color: #7e75a3; font-size: .78rem; margin-top: 26px; padding-top: 14px; border-top: 1px solid rgba(168, 85, 247, .1) }
+
+/* ===== خانه (تب پیش‌فرض) ===== */
+.nrt-theme .home-col { display: flex; flex-direction: column; gap: 16px }
+.nrt-theme .home-hero { display: flex; gap: 22px; align-items: stretch; justify-content: space-between; flex-wrap: wrap }
+.nrt-theme .home-hero .hero-main { flex: 1 1 340px; min-width: 0 }
+.nrt-theme .home-hero .home-side { display: flex; flex-direction: column; gap: 10px; min-width: 210px; max-width: 260px; flex: 1 }
+.nrt-theme .home-side .stat { text-align: right; display: flex; flex-direction: column; gap: 2px }
+.nrt-theme .home-side .stat b { font-size: 1.3rem; line-height: 1.4 }
+.nrt-theme .home-side .stat.big {
+  background: linear-gradient(135deg, rgba(139, 92, 246, .3), rgba(168, 85, 247, .12));
+  box-shadow: 0 6px 20px rgba(139, 92, 246, .2);
+}
+.nrt-theme .home-side .stat.big b { font-size: 2rem; color: #e9e2ff }
+.nrt-theme .qa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px }
+.nrt-theme .qa {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: right;
+  background: rgba(139, 92, 246, .09); border: 1px solid rgba(168, 85, 247, .28); border-radius: 14px;
+  padding: 14px 15px; cursor: pointer; font-family: inherit; color: #ece9f6; transition: .2s;
+}
+.nrt-theme .qa:hover { background: rgba(139, 92, 246, .2); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(139, 92, 246, .3); border-color: rgba(168, 85, 247, .55) }
+.nrt-theme .qa b { font-size: .93rem }
+.nrt-theme .qa small { color: #9d94c0; font-size: .74rem }
+.nrt-theme .qa-ico { font-size: 1.3rem; line-height: 1 }
+
+/* ===== مهمان: ورود/ثبت‌نام + کارت خالی ===== */
+.nrt-theme .auth-entry { font-weight: 800 }
+.nrt-theme .content .wrap { min-height: auto; padding: 6px 0 }
+.nrt-theme .content .auth-card { margin: 0 auto; box-shadow: 0 10px 34px rgba(0, 0, 0, .35) }
+.nrt-theme .auth-cta { width: auto; min-width: 240px; align-self: flex-start }
+.nrt-theme .cardinfo-empty { color: #9d94c0; font-size: .85rem; border-style: dashed; opacity: .9 }
+
+@media (max-width: 860px) {
+  .nrt-theme .grid2 { grid-template-columns: 1fr }
+  .nrt-theme .topbar { justify-content: center; text-align: center }
+  .nrt-theme .qa-grid { grid-template-columns: 1fr }
+  .nrt-theme .home-hero .home-side { flex-direction: row; flex-wrap: wrap; max-width: none; min-width: 0 }
+  .nrt-theme .home-hero .home-side .stat { flex: 1 1 100% }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nrt-theme * { animation-duration: .01ms !important; transition-duration: .01ms !important }
+}
+/* ===== پایان نورنت ===== */
